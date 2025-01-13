@@ -25,10 +25,10 @@ int main() {
         }
 
        if(ans > 0){
-        cout << "YES" << " ";
+        cout << "YES" << endl;
         }
         else{
-            cout << "NO" << " ";
+            cout << "NO" << endl;
         }
       
 
