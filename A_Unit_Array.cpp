@@ -13,24 +13,36 @@ int main() {
             cin >> arr[i] ;
         }
 
-        int val = 0 ; 
-        for(int i =0 ; i<n  ;i++){
-            if(arr[i] == -1 ){
-                val--;
-            }
+        int pos =0 ; 
+        int neg = 0 ; 
 
-            if(arr[i] == 1){
-                val++ ;
+        for(int i=0 ; i<n  ;i++){
+            if(arr[i] == -1){
+                neg++;
+            }
+            else{
+                pos++ ;
             }
         }
 
-        if(val >0) cout << 0 ;
-        else{
-            cout << abs(val);
+        int change = 0 ;
+
+        while(neg%2!= 0 || (pos-neg) < 0){
+
+            neg--;
+            pos++;
+            change++ ;
+            
+
         }
 
- 
 
-
+   cout << change <<  endl ;
+    
+    
+    
+    
     }
+
+       
 } 
