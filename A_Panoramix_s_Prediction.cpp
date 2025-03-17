@@ -10,24 +10,23 @@ int main() {
 
        vector<int> v ;
 
-       for(int i =2 ; i<=50 ; i++ ){
-         bool ans = true ;
-         for(int  j=2 ; j<n ; j++){
-            if(j != i && i%j==0){
-                 ans = false ;
-                 break ;
-            }
-
-         }
-
-         if(ans){
-            v.push_back(i); ;
+       for(int i =2 ; i<= 50  ; i++){
+        bool flag = true ;
+        for(int j = 2; j<i; j++){
+            if(i%j == 0){
+                flag = false ;
+                break ;
         }
 
        }
+       if(flag){
+        v.push_back(i) ;
+    }
+    }
+    
 
 
-       for(int i =0 ; i<v.size() ; i++){
+       for(int i =0 ; i<v.size()-1 ; i++){
         if(v[i] == n && v[i+1] == m){
             cout << "YES" << endl;
             return 0 ; 
@@ -35,13 +34,12 @@ int main() {
         }
         
        }
+      
        cout << "NO" << endl;
 
 
-
-       
- 
+    }
+    
 
 
     
-} 
